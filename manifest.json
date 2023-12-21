@@ -1,0 +1,32 @@
+{
+  "name": "OneTab",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "minimum_chrome_version": "90",
+  "action": {
+    "default_icon": "logo.png",
+    "default_title": "OneTab",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "contextMenus"
+  ]
+}

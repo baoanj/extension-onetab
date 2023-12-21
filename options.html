@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneTab</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 10px;
+      font-size: 14px;
+    }
+    textarea {
+      width: 100%;
+      display: none;
+    }
+    img {
+      width: 16px;
+    }
+    a {
+      color: #3c3c3c;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #5078ff;
+    }
+    .date {
+      color: #787878;
+    }
+    .url {
+      color: #b4b4b4;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="export">导出数据</button>
+  <div>
+    <textarea rows="10"></textarea>
+  </div>
+  <div id="list"></div>
+  <script src="./options.js"></script>
+</body>
+
+</html>
