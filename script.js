@@ -83,9 +83,8 @@ document.querySelector('#import').addEventListener('click', function () {
     let temp = pon.onetab || []
     temp = temp.filter(f => !list.find(d => d.url === f.url))
     chrome.storage.local.set({ onetab: list.concat(temp) }, function () {
-      console.log(list)
-      chrome.runtime.openOptionsPage()
       chrome.tabs.remove(res.map(m => m.id))
+      chrome.runtime.openOptionsPage()
     })
   })
 })
